@@ -1,0 +1,92 @@
+:host,
+.radio-wrapper,
+.radio-line,
+.detail-hour,
+label {
+    display: flex;
+    color: var(--light-grey);
+}
+
+:host {
+    padding: 10px 15%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.question {
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+}
+
+.form-group,
+.btn {
+    border-radius: 5px;
+}
+
+.form-group {
+    border: 3px solid var(--lighter-grey);
+    padding: 18px;
+
+    img,
+    .horario-title {
+        height: 23px;
+    }
+}
+
+.form-icon {
+    display: flex;
+    justify-content: start;
+}
+
+.horario-title {
+    display: flex;
+    align-items: center;
+}
+
+.radio-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.radio-line {
+    justify-content: space-between;
+}
+
+.border-botom {
+    border-bottom: 1px solid var(--lighter-grey);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+input[type=radio] {
+    margin: 0 11px 0 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    background: none;
+
+    width: 40%;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.btn-encontrar {
+    background-color: var(--yellow);
+    border: none;
+}
+
+.btn-limpar {
+    border: 3px solid var(--lighter-grey);
+}
+
+.btn-line {   
+    display: flex;
+ justify-content: space-evenly;
+}
+
+.line-detail {
+    margin: 25px 0 20px 0;
+}

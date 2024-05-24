@@ -1,0 +1,58 @@
+<form class="form-group">
+    <div class="form-icon">
+        <img [src]="'assets/images/icon-hour.png'" alt="">
+        <span class="horario-title"> Horário </span>
+    </div>
+    <span class="question border-botom">
+        Qual período quer treinar?
+    </span>
+
+    <div class="radio-wrapper">
+        <div class="radio-line border-botom">
+            <label for="horario-m">
+                <input type="radio" name="horario" value="M" id="horario-m">
+                Manhã
+            </label>
+            <span class="detail-hour">
+                06:00 às 12:00
+            </span>
+        </div>
+        <div class="radio-line border-botom">
+            <label for="horario-t">
+                <input type="radio" name="horario" value="T" id="horario-t">
+                Tarde
+            </label>
+            <span class="detail-hour">
+                12:01 às 18:00
+            </span>
+        </div>
+        <div class="radio-line border-botom">
+            <label for="horario-n">
+                <input type="radio" name="horario" value="N" id="horario-n">
+                Noite
+            </label>
+            <span class="detail-hour">
+                18:01 às 23:00
+            </span>
+        </div>
+        <div class="radio-line line-detail">
+            <label for="show-closed">
+                <input id="show-closed" type="checkbox">
+                Exibir unidades fechadas
+            </label>
+            <label for="show-closed">
+                Resultados encontrados <strong> {{qtdResult}} </strong>
+            </label>
+        </div>
+        <div class="btn-line">
+            <button type="submit" class="btn btn-encontrar">
+                <strong> Encontrar unidade </strong>
+            </button>
+            <button type="button" class="btn btn-limpar">
+                <strong> Limpar </strong>
+            </button>
+        </div>
+    </div>
+
+
+</form>
