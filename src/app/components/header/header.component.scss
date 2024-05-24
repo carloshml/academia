@@ -1,0 +1,44 @@
+header {
+  
+    color: black;    
+    width: 100%; 
+
+    .logo-container {
+        background: black; 
+        display: flex;
+        flex-direction: column;         
+        justify-content: center;   
+        width: 100%;          
+        padding: 20px;
+        img{
+            height: 80px;
+        }
+    }
+
+    .text-container {
+        gap: 32px;
+        padding: 10px 15%;
+        display: flex;
+        flex-direction: column;         
+        justify-content: flex-start;        
+
+        hr{
+            width: 20%;            
+            border-top: 14px solid black;
+            display: inline;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 34px;    
+            color: var(--dark-grey);  
+            font-stretch: expanded;
+        }
+
+        p {             
+            color: var(--light-grey);
+        }
+
+    }
+}
+
