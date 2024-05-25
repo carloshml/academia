@@ -10,7 +10,7 @@
     <h3 class="title"> {{ item.title}} </h3>
     <div class="content" [innerHTML]="item.content">
     </div>
-    <hr>
+    <hr *ngIf="item.opened">
     <section *ngIf="item.opened">
         <div class="situation-wrapper">
             <span [ngSwitch]="item.mask">
