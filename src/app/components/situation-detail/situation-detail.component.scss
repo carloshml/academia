@@ -1,0 +1,46 @@
+:host {
+    display: block;
+    padding: 10px 15%;
+}
+
+.situation-wrapper,
+.imagem-wrapper-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.situation-wrapper {
+    padding: 14px 10px;
+    border-radius: var(--border-radius-value);
+    background-color: var(--even-lighter-grey);
+}
+
+.imagem-wrapper {
+    flex-direction: column;
+    display: flex;
+}
+
+.imagem {
+    height: 47px;
+    display: flex;
+    align-self: center;
+}
+
+h5 {
+    display: flex;
+    align-self: center;
+}
+
+.imagem-width {
+    width: 50px;
+}
+
+.situation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.situation-label {
+    font-size: 12px;
+}
