@@ -1,0 +1,48 @@
+<div class="box-content">
+    <span [ngSwitch]="item.opened">
+        <strong class="aberto" *ngSwitchCase="true">
+            Aberto
+        </strong>
+        <strong class="fechado" *ngSwitchCase="false">
+            Fechado
+        </strong>
+    </span>
+    <h3 class="title"> {{ item.title}} </h3>
+    <div class="content" [innerHTML]="item.content">
+    </div>
+    <hr>
+    <section *ngIf="item.opened">
+        <div class="situation-wrapper">
+            <span [ngSwitch]="item.mask">
+                <img *ngSwitchCase="'required'" class="imagem" [src]="'assets/images/required-mask.png'">
+                <img *ngSwitchCase="'recommended'" class="imagem" [src]="'assets/images/recommended-mask.png'">
+            </span>
+
+            <span [ngSwitch]="item.towel">
+                <img *ngSwitchCase="'required'" class="imagem" [src]="'assets/images/required-towel.png'">
+                <img *ngSwitchCase="'recommended'" class="imagem" [src]="'assets/images/recommended-towel.png'">
+            </span>
+
+            <span [ngSwitch]="item.fountain">
+                <img *ngSwitchCase="'partial'" class="imagem" [src]="'assets/images/partial-fountain.png'">
+                <img *ngSwitchCase="'forbidden'" class="imagem" [src]="'assets/images/forbidden-fountain.png'">
+            </span>
+
+            <span [ngSwitch]="item.locker_room">
+                <img *ngSwitchCase="'partial'" class="imagem" [src]="'assets/images/partial-lockerroom.png'">
+                <img *ngSwitchCase="'closed'" class="imagem" [src]="'assets/images/forbidden-lockerroom.png'">
+                <img *ngSwitchCase="'allowed'" class="imagem" [src]="'assets/images/required-lockerroom.png'">
+            </span>
+        </div>
+        <ul class="container-schedules">
+            <li class="box-schedules" *ngFor="let item2 of item.schedules">
+                <div>
+                    <h4> {{item2.weekdays}} </h4>
+                    <span> {{item2.hour}} </span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+</div>

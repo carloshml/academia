@@ -1,2 +1,3 @@
 <app-header></app-header>
-<app-form></app-form>
+<app-form (abertosEmitter)="setAbertas($event)"></app-form>
+<app-card-list [abertas]="abertas"></app-card-list>

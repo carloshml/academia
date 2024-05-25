@@ -1,0 +1,6 @@
+<ul class="container">
+    <li class="box" *ngFor="let item of abertas">
+        <app-card [item]=item></app-card>
+    </li>
+</ul>
+<span> {{ abertas[0] |json }} </span>

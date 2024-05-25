@@ -17,17 +17,17 @@ label {
     font-size: 24px;
     width: 100%;
     display: flex;
+    padding-top: 20px;
 }
 
 .form-group,
 .btn {
-    border-radius: 5px;
+    border-radius: var(--border-radius-value);
 }
 
 .form-group {
     border: 3px solid var(--lighter-grey);
     padding: 18px;
-
     img,
     .horario-title {
         height: 23px;
@@ -60,8 +60,8 @@ label {
     padding-bottom: 10px;
 }
 
-input[type=radio] {
-    margin: 0 11px 0 0;
+input[type=radio], input[type=checkbox], .imagem {
+    margin: 0 11px 0 0; 
 }
 
 .btn {

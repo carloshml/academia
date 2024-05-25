@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    padding: 10px 15%;
+}
+
+
+.container {
+    display: flex;
+    list-style: none;
+    padding: 0;     
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    width: 33.33%;
+}

@@ -1,6 +1,6 @@
-<form class="form-group">
+<form [formGroup]="form" (ngSubmit)="procurar()" class="form-group">
     <div class="form-icon">
-        <img [src]="'assets/images/icon-hour.png'" alt="">
+        <img class="imagem" [src]="'assets/images/icon-hour.png'" alt="">
         <span class="horario-title"> Horário </span>
     </div>
     <span class="question border-botom">
@@ -10,7 +10,7 @@
     <div class="radio-wrapper">
         <div class="radio-line border-botom">
             <label for="horario-m">
-                <input type="radio" name="horario" value="M" id="horario-m">
+                <input type="radio" name="horario" formControlName="horario" value="M" id="horario-m">
                 Manhã
             </label>
             <span class="detail-hour">
@@ -19,7 +19,7 @@
         </div>
         <div class="radio-line border-botom">
             <label for="horario-t">
-                <input type="radio" name="horario" value="T" id="horario-t">
+                <input type="radio" name="horario" formControlName="horario" value="T" id="horario-t">
                 Tarde
             </label>
             <span class="detail-hour">
@@ -28,7 +28,7 @@
         </div>
         <div class="radio-line border-botom">
             <label for="horario-n">
-                <input type="radio" name="horario" value="N" id="horario-n">
+                <input type="radio" name="horario" formControlName="horario" value="N" id="horario-n">
                 Noite
             </label>
             <span class="detail-hour">
@@ -37,11 +37,11 @@
         </div>
         <div class="radio-line line-detail">
             <label for="show-closed">
-                <input id="show-closed" type="checkbox">
+                <input id="show-closed"  formControlName="showClosed" type="checkbox">
                 Exibir unidades fechadas
             </label>
             <label for="show-closed">
-                Resultados encontrados <strong> {{qtdResult}} </strong>
+                Resultados encontrados: <strong> {{results.length}} </strong>
             </label>
         </div>
         <div class="btn-line">
@@ -52,7 +52,7 @@
                 <strong> Limpar </strong>
             </button>
         </div>
-    </div>
-
-
+    </div> 
 </form>
+
+ 
