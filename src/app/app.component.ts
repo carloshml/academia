@@ -30,8 +30,7 @@ export class AppComponent {
   abertas  = [] as any;
 
 
-  setAbertas(event: any) {
-    console.log('event :::: ', event);
+  setAbertas(event: any) {    
     this.abertas = event;
   }
 }

@@ -30,7 +30,7 @@ export class FormComponent {
       validators: [Validators.requiredTrue],
     }),
   });
-  results = [];
+
 
   periodo = {
     M: [6, 12],
@@ -39,25 +39,29 @@ export class FormComponent {
   } as any;
 
   @Output() abertosEmitter = new EventEmitter<any>();
+  abertos: Location[] = [];
   constructor(private clientService: ClientService) {
   }
 
   async procurar() {
     const diaHoje = new Date().getDay();
     const results = await this.clientService.get() as Result;
-    let abertos: Location[] = [];
+    this.abertos = [];
     results.locations.forEach((location: Location) => {
       location.schedules?.forEach((schedule: Schedule) => {
         if (
           this.permitidoPeloDia(schedule, diaHoje)
           && this.permitidoPeloTurno(schedule, this.periodo[this.form.controls.horario.value])
         ) {
-          abertos.push(location);
+          if (!this.form.controls.showClosed.value && !location.opened) {
+
+          } else {
+            this.abertos.push(location);
+          }
         }
       })
     });
-    console.log('  abertos ::::',  abertos);
-    this.abertosEmitter.emit(abertos);
+    this.abertosEmitter.emit(this.abertos);
   }
 
   permitidoPeloDia(schedule: Schedule, diaHoje: number): boolean {
@@ -69,7 +73,7 @@ export class FormComponent {
     try {
       return dias[schedule.weekdays].includes(diaHoje);
     } catch (error) {
-      console.log(' error schedule.weekdays ::::',  schedule.weekdays);
+      console.error(' error schedule.weekdays ::::', schedule.weekdays);
     }
     return false;
   }
@@ -89,7 +93,7 @@ export class FormComponent {
         periodoAcademia[0] < periodoBusca[0]
         && periodoAcademia[1] > periodoBusca[0]
       )
-    ) {       
+    ) {
       return true;
     }
     return false;
