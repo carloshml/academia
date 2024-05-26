@@ -8,6 +8,7 @@ import { CardComponent } from "./components/card/card.component";
 import { CommonModule } from '@angular/common';
 import { CardListComponent } from "./components/card-list/card-list.component";
 import { SituationDetailComponent } from "./components/situation-detail/situation-detail.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
     selector: 'app-root',
@@ -21,7 +22,8 @@ import { SituationDetailComponent } from "./components/situation-detail/situatio
         HttpClientModule,
         CommonModule,
         CardListComponent,
-        SituationDetailComponent
+        SituationDetailComponent,
+        FooterComponent
     ]
 })
 export class AppComponent {
