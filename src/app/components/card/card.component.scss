@@ -1,50 +1,56 @@
- .box-content {
-     display: flex;
-     flex: 1;
-     padding: 20px;
-     margin: 4px;
-     border-radius: var(--border-radius-value);
-     box-shadow: 1px 1px 4px 2px var(--lighter-grey);
-     background-color: var(--even-lighter-grey);
-     height: 400px;
-     flex-direction: column;
- }
+:host{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
 
- hr {
-     color: var(--lighter-grey);
- }
+.box-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    margin: 4px;
+    border-radius: var(--border-radius-value);
+    box-shadow: 1px 1px 4px 2px var(--lighter-grey);
+    background-color: var(--even-lighter-grey);
+    height: 400px;
+    flex-direction: column;
+}
 
- .title{
-    padding: 10px 0 ;
- }
+hr {
+    color: var(--lighter-grey);
+}
 
- .aberto {
-     color: var(--green);
- }
+.title {
+    padding: 10px 0;
+}
 
- .fechado {
-     color: var(--red);
- }
+.aberto {
+    color: var(--green);
+}
 
- .imagem {
-     height: 47px;
- }
+.fechado {
+    color: var(--red);
+}
 
- .situation-wrapper {
-     display: flex;
-     justify-content: space-between;
-     padding: 14px 0;
- }
+.imagem {
+    height: 47px;
+}
 
- .content {
-     font-size: 12px;
-     color: var(--light-grey);
- }
+.situation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+}
 
- .container-schedules {
+.content {
+    font-size: 12px;
+    color: var(--light-grey);
+}
+
+.container-schedules {
     display: flex;
     list-style: none;
-    padding: 0;     
+    padding: 0;
     flex-wrap: wrap;
 }
 

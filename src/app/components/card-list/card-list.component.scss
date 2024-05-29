@@ -13,5 +13,15 @@
 
 .box {
     display: flex;
-    width: 33.33%;
+    flex-direction: row;
+    flex: 1; 
+    flex-grow: 1; 
 }
+
+
+ @media (max-width: 800px) {
+    .box {
+        flex-direction: column;
+    }
+}
+
